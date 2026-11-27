@@ -12,7 +12,7 @@ Compare [direct Ads tagging, GA4/Firebase imports and server-side routes](market
 
 Server-side tracking can run from an existing website backend. A hosted server-side GTM container is optional. At handoff the agent offers to set a weekly or monthly tracking health reminder.
 
-Deep checks cover [GA4 and Google Ads settings](marketing-measurement/references/ga4-settings.md), [deduplication and original IP handling](marketing-measurement/references/dedup-and-request-context.md), and [site-wide remarketing coverage](marketing-measurement/references/web.md#site-wide-remarketing-coverage).
+Deep checks cover [GA4 and Google Ads settings](marketing-measurement/references/ga4-settings.md), including Search Console links, 14-month retention, Enhanced Measurement and Google Signals, plus [Meta catalog product IDs](marketing-measurement/references/event-parameters.md#meta-catalog-product-ids), [deduplication and original IP handling](marketing-measurement/references/dedup-and-request-context.md), and [site-wide remarketing coverage](marketing-measurement/references/web.md#site-wide-remarketing-coverage).
 
 The [signed-in Meta matching guide](marketing-measurement/references/conversion-routes.md#signed-in-user-matching-on-every-eligible-event) also covers eligible verified email, mobile and a stable external_id on each supported signed-in web/app event, guests, logout, account switches and consent withdrawal.
 
