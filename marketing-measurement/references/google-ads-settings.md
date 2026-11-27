@@ -6,7 +6,7 @@ Audit the effective settings before making any change. Check existing account, c
 
 | Setting | Recommended decision and verification |
 | --- | --- |
-| Auto-tagging | In Admin → Account settings, verify Google Ads auto-tagging and keep it ON for the authorized Google Ads/GA4 attribution flow where appropriate. This handles supported Google click identifiers. Check that first-party redirects and app/landing handoffs preserve eligible IDs. |
+| Auto-tagging | In Admin → Account settings, verify that Google Ads auto-tagging is **ON** as the default for web conversion measurement. Enable it within the authorized account scope if off, then reopen the setting to verify. Test that the landing page accepts click parameters and that redirects, cross-domain forms and CRM handoffs preserve eligible values. Log any explicit exception and why. |
 | Final URL | The exact user-facing destination. Check correct domain, locale, offer, and mobile path. Validate any sitelinks, mobile URLs and dynamic final URLs used by the campaign. |
 | Final URL suffix | Use for UTMs and ValueTrack fields that must arrive on the landing page, especially with parallel tracking. An account-level default suits a shared taxonomy; use campaign-specific values or overrides when needed. Enter without a leading question mark. If a destination already has UTMs, resolve conflicts before saving. |
 | Tracking template | Add or preserve it when a measurement provider, redirect, or other deliberate routing requires it. For applicable account/campaign/ad group templates, insert the actual final URL with `{lpurl}` or the provider-required escaped variant. Do not copy a third-party redirect example into a live account. If you only need landing-page UTMs, a Final URL suffix can do that without a separate template. |
@@ -35,6 +35,7 @@ Use Google Ads **Test** for URL options, confirm the actual landing URL and redi
 ## Google Ads measurement settings readback
 
 - Verify correct links to GA4/Firebase, authorized audience exports and personalization, and actual website/app data sources. Verify account/region policy and end-user consent before implementing user-provided data or enhanced conversions.
+- For eligible web lead flows, enable the unified Enhanced conversions setting and verify website capture plus CRM upload and diagnostics. Follow the [offline conversions workflow](conversion-routes.md#google-offline-conversions-and-first-party-matching).
 - Check the Google tag/destination and conversion-linker behavior, site-wide eligible remarketing, audience diagnostics, cross-domain landing behavior, and native hosted lead-form reporting when applicable.
 - Per conversion action, check category, source, count, actual value and currency, click/view windows where supported, attribution model, diagnostics, and account-default and campaign-specific goals. A Primary label alone does not describe every campaign's behavior.
 - For supported server delivery, check the destination conversion action, consent, original permitted click/match context, deduplication/adjustments, upload status and actual report. Use the [conversion route guide](conversion-routes.md) for request-level diagnostics.

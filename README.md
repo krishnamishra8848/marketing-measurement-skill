@@ -20,7 +20,7 @@ The [business and CRM playbook](marketing-measurement/references/business-playbo
 
 The [lead form data guide](marketing-measurement/references/lead-form-data.md) covers visible form fields, consent, hidden attribution context, backend/CRM storage, and Google/Meta click ID mapping.
 
-The [Google Ads settings guide](marketing-measurement/references/google-ads-settings.md) covers Tracking Template, Final URL suffix, ValueTrack, Calls from ads and conversion goal verification.
+The [Google Ads settings guide](marketing-measurement/references/google-ads-settings.md) covers Tracking Template, Final URL suffix, ValueTrack, Calls from ads and conversion goal verification. See the [Google offline conversions workflow](marketing-measurement/references/conversion-routes.md#google-offline-conversions-and-first-party-matching) for Data Manager API, Enhanced Conversions for Leads and first-party matching, and the [mobile guide](marketing-measurement/references/mobile.md#firebase-and-admob-personalization) for Firebase and AdMob personalization.
 
 ## Install for Codex or Claude Code
 

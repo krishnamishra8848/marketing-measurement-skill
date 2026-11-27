@@ -8,6 +8,14 @@
 6. For AdMob, link the correct Firebase/Analytics app and verify supported **impression-level** revenue. Keep a single monetary source and preserve micros-to-currency conversion, currency, platform, format and ad-unit context when used. UMP readiness to request ads and eligibility for personalized delivery are distinct. Use test ads during QA. Time interstitials at suitable transitions and judge retention and completed sessions alongside yield.
 7. Verify install/update, fresh grant/deny, later revocation, account switch, process restart and offline-to-online behavior. Check Firebase DebugView and reports, Ads import processing and campaign attribution, Meta Test Events or recorded diagnostics, and isolated AdMob impression revenue. For acquisition analysis compare matched-country cohort LTV, retention and CPI. Use real revenue for value optimization when supported and sufficient.
 
+## Firebase and AdMob personalization
+
+- When personalization is in scope, link the exact AdMob app to its Firebase/GA4 app and verify the setting for each intended data destination. Check the corresponding GA4 to Google Ads link if app remarketing is also requested.
+- Enable personalization for eligible users with applicable permission. Verify UMP and Firebase consent for `ad_storage`, `ad_user_data`, `ad_personalization` and `analytics_storage` independently. Read the actual user choice before requesting personalized ads. Recheck after revocation and restart. Use the permitted non-personalized or limited mode when available, or defer ads if required. Apply ATT or other platform controls when applicable.
+- Keep guarded Ads conversion matching separate from ad serving. Use Firebase event parameters for app activity and configured identifiers supported by the provider. Use AdMob SDK/UMP mechanisms for serving and consent. Keep contact identifiers, including hashed email and phone, out of AdMob requests and ordinary Firebase event parameters. In QA, verify consent state and request behavior with test ads. Ad delivery can still depend on eligibility and auction conditions.
+
+[Link AdMob to Firebase](https://support.google.com/firebase/answer/6387949) · [AdMob UMP consent mode](https://developers.google.com/admob/android/privacy/consent-mode)
+
 ## Server-confirmed app purchases
 
 Select one route for a purchase confirmed after the native checkout. A Firebase/GA4 Measurement Protocol route uses the correct Firebase app ID and eligible app instance ID from the originating client, with credentials kept server-side. A verified buyer-app callback can be another route if it reaches the client and reliably handles duplicate display/reopen events. Do not mirror an app purchase into a web stream to fill reporting gaps. Preserve the genuine approval/outcome time separately from the acquisition/session time. Verify current ingestion and session-join limits. A delayed approval can legitimately have weaker attribution.
