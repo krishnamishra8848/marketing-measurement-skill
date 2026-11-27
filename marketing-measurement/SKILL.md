@@ -1,11 +1,21 @@
 ---
 name: marketing-measurement
-description: Plan, implement, or audit marketing measurement for websites, mobile apps, and CRM outcomes using GTM, GA4, Google Ads, Meta Pixel, CAPI, Meta App Events, Firebase, Clarity, or AdMob. Use for event parameters, consent, attribution, deduplication, conversion goals, audiences, and delivery verification.
+description: Plan, implement, or audit marketing measurement for websites, mobile apps, social Pages, hosted forms, and CRM outcomes using GTM, GA4, Google Ads, Meta Pixel, CAPI, Meta App Events, Firebase, Clarity, or AdMob. Use for event parameters, consent, attribution, deduplication, conversion goals, audiences, and delivery verification.
 ---
 
 # Marketing Measurement
 
 Developed by Krishna Mishra.
+
+## First ask where the action happens
+
+For a new setup, begin with: **“Where do you want tracking set up: an owned website, an Android/iOS app, or a Page?”** If they say Page, ask whether it is a landing page they control, a Facebook/Instagram Page, or a hosted form. Ask where the intended outcome actually completes, such as a website checkout, in-app purchase, platform form, or WhatsApp conversation. If the user already gave clear answers, restate the chosen route briefly and proceed. For mixed journeys, map each step before choosing tools and assign each conversion its actual source.
+
+| Surface or outcome | Start here |
+| --- | --- |
+| Owned website or owned landing page | Verify the domain and use [website measurement](references/web.md). Scoped landing pages can use the existing site tags with route-specific triggers. |
+| Android or iOS app | Verify the package or bundle and use [mobile measurement](references/mobile.md). Start with the app stream, native SDK and eligible Ads imports. |
+| Facebook/Instagram Page, hosted form or messaging | Use [Page and hosted conversion measurement](references/pages-and-hosted-conversions.md). Choose native insights, lead-form reporting, campaign destination, messaging or CRM feedback based on the actual action. |
 
 ## Deliver what the user asked for
 

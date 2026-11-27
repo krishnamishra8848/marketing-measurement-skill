@@ -4,7 +4,7 @@
 
 An open-source Agent Skill for planning, implementing and verifying marketing measurement across websites, mobile apps and CRM outcomes. It covers GTM, GA4, Firebase Analytics, Google Ads, Meta Pixel, Conversions API, Meta App Events SDK, Microsoft Clarity and AdMob.
 
-Start with the business outcome, map the events and parameters, choose the right transport, then prove that each event reaches the intended destination. The skill guides your agent through existing code and connected tools. Live operations require your own access and authorization.
+The agent first identifies the setup surface: owned website, mobile app, or Page. It distinguishes an owned landing page from a social Page or hosted form, then maps the actual outcome to the right platform and verifies delivery. The skill guides your agent through existing code and connected tools. Live operations require your own access and authorization.
 
 ## Install for Codex or Claude Code
 
@@ -26,6 +26,7 @@ Start a fresh session. In Codex, select **marketing-measurement** from the skill
 ## Try it
 
 - **Website:** “Audit my checkout. Map GA4, Google Ads and Pixel/CAPI Purchase, trace the authoritative paid event, and give me a verification plan.”
+- **Social Page:** “My Facebook Page sends people to WhatsApp. Help me track conversations and qualified leads using the right source.”
 - **App:** “Set up measurement for my marketplace. Separate registration, verified-phone lead, buyer and seller audiences, and approved purchases.”
 - **CRM:** “Plan qualified-lead feedback from my website and WhatsApp. Show which identifiers each route needs, and test with synthetic data before sending any live events.”
 - **Troubleshooting:** “Meta receives PageView but Purchase is missing. Trace consent, order approval, outbox and provider status. Show where the first break occurs.”
