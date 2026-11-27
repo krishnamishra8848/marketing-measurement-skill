@@ -17,6 +17,23 @@ For a new setup, begin with: **“Where do you want tracking set up: an owned we
 | Android or iOS app | Verify the package or bundle and use [mobile measurement](references/mobile.md). Start with the app stream, native SDK and eligible Ads imports. |
 | Facebook/Instagram Page, hosted form or messaging | Use [Page and hosted conversion measurement](references/pages-and-hosted-conversions.md). Choose native insights, lead-form reporting, campaign destination, messaging or CRM feedback based on the actual action. |
 
+## Required platform coverage
+
+Every setup plan, audit, and handoff must include all eight rows below. For each, report the applicable route, existing or proposed configuration, verification evidence, and a next action. Use **Configured and verified**, **Configured, verification pending**, **Needs setup**, **Blocked**, or **Not applicable**, with a concrete reason. Implement applicable routes within the user's authorized scope. A full audit includes every row even when the destination's architecture requires only some of them.
+
+| Required check | Owned website or landing page | Native mobile app | Social Page or hosted conversion |
+| --- | --- | --- | --- |
+| GTM | Inspect the web container or plan an appropriate web tag architecture. Check server GTM separately if warranted. | Check app-specific GTM only when supported and warranted by the existing Firebase architecture. | Check owned destinations for web tags. Hosted surfaces use native controls. |
+| GA4 | Check property, web stream, events and key events. | Check the Firebase Analytics app stream, consent and events. | Check any connected website or app funnels. Use native Page or form reporting for on-platform actions. |
+| Meta Pixel | Check the correct pixel/dataset, browser events and consent. | Check any owned web surface involved. Native activity uses app events. | Check a linked owned website if applicable. Use native reporting for on-platform activity. |
+| Meta CAPI | Check eligible website backend events and Pixel deduplication. | Check the app CAPI route and SDK overlap. | Check the actual messaging, lead-feedback, or offline source where the workflow supports it. |
+| Google Ads | Check account, correct goal and chosen website tag or GA4 import. | Check Firebase/GA4 link and intended app conversion imports. | Check an eligible native Google lead form or the actual Google Ads destination. Record scope if only Meta activity exists. |
+| Google Ads server-side | Check support for server GTM, Data Manager or an eligible direct/backend route. Identify the exact supported conversion type. | Check eligible backend routes separately from Firebase/GA4 imports. | Check eligible CRM feedback or Google-hosted form outcomes. Avoid cross-platform assumptions. |
+| Microsoft Clarity | Check project, consent and masking on owned pages. | Evaluate the supported mobile SDK for the app's platform and privacy needs. | Check owned destinations. Use native platform insights on hosted surfaces. |
+| Meta SDK | Check any native app connected to the journey. Website measurement uses Pixel/CAPI. | Check the Meta App Events SDK, app identity, consent, and its relationship to CAPI. | Check a connected native app when there is one. |
+
+For native apps include **Firebase Analytics** explicitly under GA4. Include **AdMob and impression revenue** when the app monetizes through ads. A Google Ads import does not satisfy the server-side row. A Meta Pixel or CAPI installation does not satisfy the native SDK row. A stack choice is only complete when every row has evidence or an explicit rationale.
+
 ## Deliver what the user asked for
 
 For an audit, trace the existing journey and identify the first broken or unverified link. For a plan, produce an event registry, route map and validation plan. For implementation, apply authorized changes to the existing stack and validate them through the normal entry point. Discover available source, account connectors or browser access. Continue source-side work when dashboard access is missing, and identify the exact remaining prerequisite.

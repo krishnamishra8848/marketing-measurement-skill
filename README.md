@@ -6,6 +6,8 @@ An open-source Agent Skill for planning, implementing and verifying marketing me
 
 The agent first identifies the setup surface: owned website, mobile app, or Page. It distinguishes an owned landing page from a social Page or hosted form, then maps the actual outcome to the right platform and verifies delivery. The skill guides your agent through existing code and connected tools. Live operations require your own access and authorization.
 
+**Every setup checks all eight:** GTM, GA4, Meta Pixel, Meta CAPI, Google Ads, Google Ads server-side, Microsoft Clarity, and Meta SDK. The skill identifies the applicable route or gives a concrete reason for a platform exception.
+
 ## Install for Codex or Claude Code
 
 Download the [latest release](https://github.com/krishnamishra8848/marketing-measurement-skill/releases/latest) or clone the source:
