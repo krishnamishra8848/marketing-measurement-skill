@@ -12,6 +12,8 @@ Compare [direct Ads tagging, GA4/Firebase imports and server-side routes](market
 
 Server-side tracking can run from an existing website backend. A hosted server-side GTM container is optional. At handoff the agent offers to set a weekly or monthly tracking health reminder.
 
+Deep checks cover [GA4 and Google Ads settings](marketing-measurement/references/ga4-settings.md), [deduplication and original IP handling](marketing-measurement/references/dedup-and-request-context.md), and [site-wide remarketing coverage](marketing-measurement/references/web.md#site-wide-remarketing-coverage).
+
 ## Install for Codex or Claude Code
 
 Download the [latest release](https://github.com/krishnamishra8848/marketing-measurement-skill/releases/latest) or clone the source:

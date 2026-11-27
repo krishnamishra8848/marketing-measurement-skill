@@ -39,6 +39,12 @@ Run synthetic cases with DebugView, isolated properties and test events as appro
 - Check whether the displayed metric describes a different event, date, source or dataset. Inspect coverage by eligible cohort, dedup, order linking and account grant evidence.
 - Validate amount, currency, count, selected goals and report windows before adjusting any bidding. Use same-period comparable cohorts. An accepted request or a high score cannot prove incremental sales.
 
+### E. Site-wide remarketing and GA4 setup review
+
+- Sample each template and client-side route using the production tag configuration in preview. Confirm the base signal with permission and expected behavior after deny and revocation. Check consent propagation on cross-domain returns, and prove Lead and Purchase tags only respond to actual outcomes.
+- Reopen the intended GA4 property and confirm the saved [GA4 settings](ga4-settings.md) and Ads link, eligible audience rules, and source health. Report audience membership and serving eligibility separately.
+- Verify product IDs against the actual feed, and inspect values on a second item. Compare genuinely ad-referred and organic browser context. A forged forwarded header, missing click ID, or later staff approval must not replace original visitor context. See [matching and deduplication](dedup-and-request-context.md).
+
 ## Handoff checklist
 
 - List changed routes and their business purpose, known IDs and editable goals.

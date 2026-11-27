@@ -22,6 +22,15 @@ Compare expected hosting and maintenance costs, credentials, queue/retry support
 
 [Meta Conversions API](https://business-auth.facebook.com/business/tools/conversions-api) · [Google Data Manager events](https://developers.google.com/data-manager/api/devguides/events)
 
+## Site-wide remarketing coverage
+
+- Use a single managed Google tag configuration across all eligible site pages when Google Ads website visitor remarketing is selected. Attach the correct Ads destination to an existing Google tag if supported. Test home, campaign landing pages, category/product pages, cart, checkout, client-side route changes and other relevant templates. Keep consent and sensitive-route exclusions intact.
+- Keep dynamic remarketing and conversion snippets action-specific. Pass exact feed IDs where a dynamic event requires them. For supported Google Ads retail events, map items to the feed id and set google_business_vertical to retail. GA4 item_id and Meta content_ids are separate contracts. Compare the emitted values against real feed entries. A site-wide tag must not cause Purchase or Lead to fire on every page. For a SPA, verify route measures with the existing tag owner, and inspect iframe/hosted checkout boundaries before claiming full coverage.
+- If the chosen source is linked GA4 audiences instead, verify eligible website measurement, Ads audience export, rules and destination. Check the Meta Pixel base coverage on eligible owned pages when Meta retargeting is in scope. Reuse supported setups before introducing duplicates.
+- In Audience Manager or Events Manager check source diagnostics, actual reception and audience population separately. Test granted, denied and revoked paths. Recheck after changes to templates, routing, CMP or destination.
+
+[Google Ads website tag](https://support.google.com/google-ads/answer/2476688) · [Google dynamic remarketing](https://support.google.com/google-ads/answer/3103357) · [Google Ads dynamic parameters](https://support.google.com/google-ads/answer/7305793)
+
 ## Implement in order
 
 1. Inspect GTM published version and workspace, code, CMS integrations and plugins. Find each Google tag, Meta Pixel, Clarity script and server sender. Export or record the rollback version and snapshot the route matrix. Verify existing Google Ads auto-tagging, cross-domain journeys and real acquisition parameters where relevant. Preserve genuine query IDs through approved redirects without forwarding unrelated private parameters.
