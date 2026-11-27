@@ -8,6 +8,8 @@ The agent first identifies the setup surface: owned website, mobile app, or Page
 
 **Every setup checks all eight:** GTM, GA4, Meta Pixel, Meta CAPI, Google Ads, Google Ads server-side, Microsoft Clarity, and Meta SDK. The skill identifies the applicable route or gives a concrete reason for a platform exception.
 
+Compare [direct Ads tagging, GA4/Firebase imports and server-side routes](marketing-measurement/references/conversion-routes.md#offer-a-google-ads-route-choice) before choosing an Ads setup.
+
 ## Install for Codex or Claude Code
 
 Download the [latest release](https://github.com/krishnamishra8848/marketing-measurement-skill/releases/latest) or clone the source:

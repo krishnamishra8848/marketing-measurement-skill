@@ -13,6 +13,20 @@ For new Google offline conversion and enhanced-conversions-for-leads integration
 
 Check auto-tagging and that each eligible lead carries the original genuine click ID where available. Use provider-supported matching fields and actual conversion dates/amounts. Record upload/retrieval status separately from attributed reporting and observe the applicable time window. Keep transaction identity and value stable across permitted retries. For dual imports and tags, distinguish duplicate delivery, duplicate bidding and duplicate totals in reporting. Secondary actions can still appear in All conversions and can be used for bidding when included in a campaign custom goal. Segment by conversion action, inspect account-default and custom goals, and verify one outcome in the intended bidding path. Disable the obsolete sender or import only after a verified cutover, preserving useful history. [Primary and Secondary actions](https://support.google.com/google-ads/answer/10995103)
 
+## Offer a Google Ads route choice
+
+After identifying the surface and objective, show the eligible route options and recommend one. If the user already chose an eligible route, confirm that choice and continue.
+
+| Option | Best fit | Google Ads reporting freshness |
+| --- | --- | --- |
+| Direct Google Ads conversion tag, deployed through web GTM or a Google tag | Owned website with a reliable browser conversion signal and a need for quicker Ads reporting | Google's comparison lists about **3 hours for last-click** and **15 hours for other models**. GTM can dispatch at the event trigger. Dispatch time does not tell you when the report or bidding will use the conversion. |
+| GA4 key event or Firebase event imported into Google Ads | Existing Analytics event contract, especially eligible native app conversions, or a funnel where a shared event definition matters | Google's comparison lists **12 hours for last-click** and **24 hours for other models**. The import guide says data can take up to **24 hours** to appear in Ads. GA4's own reports can take **24–48 hours** to process and stabilize. These describe different stages. |
+| Eligible server-side Google Ads route | Server-verified orders, CRM-qualified leads, or a deliberate supported server-side tag implementation | Check the chosen Google Ads or Data Manager route, provider processing, validation and attribution. Web-tag and GA4-import timings do not establish a server upload schedule. |
+
+Offer direct website Ads tracking for quicker reporting when it fits, and keep GA4 available for analytics if requested. Offer Firebase/GA4 import for supported app events. Confirm **one intended bidding action** per business outcome per campaign and check any custom goals. If there is a reason to run both for comparison, keep the observation action out of bidding goals and report by action. A planning estimate such as **1–2 hours** can be recorded as a measured project observation when evidence supports it. Avoid promising that timeframe or a fixed Smart Bidding processing time.
+
+[Google Ads data freshness comparison](https://support.google.com/google-ads/answer/2544985) · [Google Ads GA4 import timing](https://support.google.com/google-ads/answer/2375435) · [GA4 reporting freshness](https://support.google.com/analytics/answer/11198161)
+
 ## Meta by conversion source
 
 - **Website:** Link the correct website pixel/dataset. For a simultaneous browser and server copy, share the exact event name and event identity. Browser Pixel uses `eventID`; CAPI uses `event_id`. For a server-only confirmed outcome, prefer one authoritative sender unless a legitimate buyer-side copy is designed and validated.
