@@ -45,3 +45,16 @@ Run synthetic cases with DebugView, isolated properties and test events as appro
 - Include test environment/time, sample identities as opaque references, outcomes and provider screens checked.
 - Record open verification gaps, access blockers, consent limits and rollback location. Keep secrets and customer rows outside shared artifacts.
 - Scope any remediation to the first evidenced failure and test adjacent paths before claiming resolution.
+
+## Recurring tracking health check
+
+At handoff, state which checks passed, which are pending, and when they were last verified. Then ask: **“Should I remind you to recheck tracking every 7 days, once a month, or not at all?”** If cadence was already specified, use it. Confirm a start or local time only when needed. Use the agent's supported reminder or automation tool when available. Confirm creation and show the next run when the scheduler provides it. If scheduling is unavailable, provide a short copyable calendar reminder with the checklist. Only report an active reminder after the scheduler confirms it.
+
+The reminder should point to the saved event/route inventory and ask the owner to check:
+
+- Recent genuine provider deliveries against the source ledger or CRM, with the intended Ads action, stream, dataset and date window.
+- Missing or duplicate Purchase and Lead, currency and value, campaign goal selection and recent attribution or consent changes.
+- Browser and mobile behaviour after deployments or SDK updates, including consent and revocation, callback overlap and recording masking.
+- Last successful send, oldest pending job, errors and last verified provider receipt. Confirm next action and owner for any gap.
+
+Use read-only evidence unless more is authorized. A reminder to recheck and an automated live audit are separate tasks. A quiet period without orders is insufficient to establish a fault. Never fire synthetic production conversions or alter campaign settings as part of the reminder.

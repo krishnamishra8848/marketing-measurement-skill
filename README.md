@@ -10,6 +10,8 @@ The agent first identifies the setup surface: owned website, mobile app, or Page
 
 Compare [direct Ads tagging, GA4/Firebase imports and server-side routes](marketing-measurement/references/conversion-routes.md#offer-a-google-ads-route-choice) before choosing an Ads setup.
 
+Server-side tracking can run from an existing website backend. A hosted server-side GTM container is optional. At handoff the agent offers to set a weekly or monthly tracking health reminder.
+
 ## Install for Codex or Claude Code
 
 Download the [latest release](https://github.com/krishnamishra8848/marketing-measurement-skill/releases/latest) or clone the source:

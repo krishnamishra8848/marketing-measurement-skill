@@ -6,6 +6,22 @@
 - Choose server-side GTM when a managed first-party tagging endpoint, shared transformations or provider routing justify infrastructure, monitoring and maintenance. Confirm client parsing, trusted proxy boundaries, DNS/TLS, consent forwarding and downstream tags. A server container does not itself confirm a native app, Pixel, CAPI or Ads integration.
 - Direct backend API delivery fits trusted outcomes such as paid orders and qualified leads. Use an existing queue or an idempotent outbox. GA4 Measurement Protocol supplements browser/SDK collection. Keep separate route owners so tags and backend jobs do not duplicate a conversion.
 
+### Direct from your own website server
+
+A WordPress plugin, Next.js backend, existing API or worker can send events directly over HTTPS to provider endpoints. **You can keep web GTM for browser tags and use your own backend for server delivery without buying or provisioning server-side GTM.**
+
+| Destination | Direct route |
+| --- | --- |
+| Meta | Send eligible web events from your backend through Meta CAPI. Pair with Pixel using the same event name and ID when both legitimately emit the same outcome. |
+| GA4 | Use Measurement Protocol for eligible server events alongside the normal browser or Firebase collection. Use the right stream and eligible client identity. |
+| Google Ads | Use a supported Data Manager or other eligible direct route for the chosen Ads action and event source. Check current account and action eligibility and confirm one bidding action per outcome. |
+
+Example: The payment webhook or verified order transition writes the original order event and one job per eligible provider. The worker checks consent, supplies the correct destination and genuine matching context, then stores sanitised receipt and retry state. The browser can continue measuring product views and checkout intent. Preserve the same event identity through retries.
+
+Compare expected hosting and maintenance costs, credentials, queue/retry support, and diagnostics. Recommend server-side GTM if centralised tagging or a supported tag integration solves a requirement the direct backend route cannot cover well. If the current backend already covers the requirements, reuse it.
+
+[Meta Conversions API](https://business-auth.facebook.com/business/tools/conversions-api) · [Google Data Manager events](https://developers.google.com/data-manager/api/devguides/events)
+
 ## Implement in order
 
 1. Inspect GTM published version and workspace, code, CMS integrations and plugins. Find each Google tag, Meta Pixel, Clarity script and server sender. Export or record the rollback version and snapshot the route matrix. Verify existing Google Ads auto-tagging, cross-domain journeys and real acquisition parameters where relevant. Preserve genuine query IDs through approved redirects without forwarding unrelated private parameters.
