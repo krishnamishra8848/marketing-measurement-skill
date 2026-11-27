@@ -20,6 +20,8 @@ The [business and CRM playbook](marketing-measurement/references/business-playbo
 
 The [lead form data guide](marketing-measurement/references/lead-form-data.md) covers visible form fields, consent, hidden attribution context, backend/CRM storage, and Google/Meta click ID mapping.
 
+The [Google Ads settings guide](marketing-measurement/references/google-ads-settings.md) covers Tracking Template, Final URL suffix, ValueTrack, Calls from ads and conversion goal verification.
+
 ## Install for Codex or Claude Code
 
 Download the [latest release](https://github.com/krishnamishra8848/marketing-measurement-skill/releases/latest) or clone the source:
