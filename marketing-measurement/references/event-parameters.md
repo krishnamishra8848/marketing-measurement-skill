@@ -34,6 +34,8 @@ Use this as a selection guide. Verify enabled products, current event requiremen
 | Provider identity | Email, phone, name, city, country, postcode, external ID, original request context where supported | Send only eligible fields using the selected provider's normalization and hashing rules. Omit missing/untrusted values. See [route matching](conversion-routes.md). |
 | Revenue | Currency, amount, units, gross/net/fee basis, item/discount/tax treatment | Reconcile to authoritative records. Store minor units where practical and convert to provider units at the boundary. |
 
+For lead forms, use [lead form fields and acquisition identifiers](lead-form-data.md) to design consented capture and follow-up.
+
 ## Copyable registry row
 
 | Business event | Exact trigger and source | Purpose | Parameters and ID | Destination and count/value | Verification |

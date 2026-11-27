@@ -18,6 +18,8 @@ The [signed-in Meta matching guide](marketing-measurement/references/conversion-
 
 The [business and CRM playbook](marketing-measurement/references/business-playbook.md) connects tracking to campaign objectives, creative and landing pages, lead qualification, mature cohorts and revenue or contribution targets.
 
+The [lead form data guide](marketing-measurement/references/lead-form-data.md) covers visible form fields, consent, hidden attribution context, backend/CRM storage, and Google/Meta click ID mapping.
+
 ## Install for Codex or Claude Code
 
 Download the [latest release](https://github.com/krishnamishra8848/marketing-measurement-skill/releases/latest) or clone the source:
