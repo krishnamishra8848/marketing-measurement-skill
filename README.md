@@ -14,6 +14,10 @@ Server-side tracking can run from an existing website backend. A hosted server-s
 
 Deep checks cover [GA4 and Google Ads settings](marketing-measurement/references/ga4-settings.md), [deduplication and original IP handling](marketing-measurement/references/dedup-and-request-context.md), and [site-wide remarketing coverage](marketing-measurement/references/web.md#site-wide-remarketing-coverage).
 
+The [signed-in Meta matching guide](marketing-measurement/references/conversion-routes.md#signed-in-user-matching-on-every-eligible-event) also covers eligible verified email, mobile and a stable external_id on each supported signed-in web/app event, guests, logout, account switches and consent withdrawal.
+
+The [business and CRM playbook](marketing-measurement/references/business-playbook.md) connects tracking to campaign objectives, creative and landing pages, lead qualification, mature cohorts and revenue or contribution targets.
+
 ## Install for Codex or Claude Code
 
 Download the [latest release](https://github.com/krishnamishra8848/marketing-measurement-skill/releases/latest) or clone the source:

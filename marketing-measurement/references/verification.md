@@ -21,6 +21,7 @@ Run synthetic cases with DebugView, isolated properties and test events as appro
 - Before approval, payment receipt upload and page refresh do not create Purchase. Approval of a verified paid transaction creates one authoritative outcome.
 - Test consent grant, deny, revocation between enqueue and send and original consent missing. Inspect where a saved grant binds to the checkout and order. Record the first stage that fails. Require the correct buyer and original journey context.
 - Submit the same verified outcome twice in an isolated environment. Confirm one stable transaction/event ID. If the browser and CAPI both emit, validate their name/ID pair and platform deduplication. Compare totals and currencies to the ledger.
+- Compare eligible outcomes to queued, dispatched, accepted, processed, partial, rejected, expired, missing, corrected and reconciled counts where observable. Compare reconciled revenue against the original order ledger.
 - For a row stuck between send and receipt, classify the failure. Retry transient errors according to policy using the same identity. Repair validation or permission errors first. Unknown send outcome requires lookup or a safely idempotent route before replay.
 
 ### B. Marketplace buyer and seller attribution

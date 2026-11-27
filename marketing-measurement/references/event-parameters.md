@@ -17,6 +17,13 @@ Use this as a selection guide. Verify enabled products, current event requiremen
 | Refund | `refund` / supported conversion adjustment | Original transaction ID, real refund items/amount, adjustment identity and time | Model partial and repeated refunds safely. Provider refund support differs. |
 | Actual monetized ad impression | SDK `ad_impression` / paid callback where applicable | Ad platform/source, unit/format, paid value and currency | Use one monetary source per platform. Ad request, loaded, shown and paid callbacks have distinct meanings. |
 
+## Optional events to evaluate
+
+- Consider site search, wishlist and payment-info submission for shopping journeys. Use safe search terms, valid item IDs and real actions. A payment-method selection is not a paid order.
+- Consider application submitted, scheduled appointment, trial started and subscription confirmed when they are genuine lifecycle milestones. Use the provider's exact supported event name and required parameters. Separate attempted submission from confirmation, and trial activation from paid renewal.
+- Consider bounded video milestones and scroll thresholds for creative or landing-page review. Choose thresholds that inform a decision, such as 25%, 50% and 90% watch. Avoid duplicate automatic and custom scroll/video events and preserve privacy around content and form values.
+- Select recommended event parameters by event and destination. Examples include name, product/feed ID, type, quantity, value, currency and order ID where relevant. Meta catalog IDs, Google Ads feed identifiers and GA4 item IDs can differ. Send customer matching attributes through a provider-specific identity channel.
+
 ## Assign parameters to the correct lane
 
 | Lane | Examples | Handling |
